@@ -1,0 +1,176 @@
+export default function TrizahPortfolio() {
+  return (
+    <div className="min-h-screen bg-black text-white font-sans overflow-x-hidden">
+      {/* Background Glow */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500 opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 opacity-20 blur-3xl"></div>
+      </div>
+
+      {/* Navbar */}
+      <nav className="flex justify-between items-center p-6 border-b border-cyan-500/20 backdrop-blur-md sticky top-0 bg-black/50 z-50">
+        <h1 className="text-2xl font-bold tracking-widest text-cyan-400">
+          TRIZAH
+        </h1>
+
+        <div className="flex gap-6 text-sm md:text-base">
+          <a href="#about" className="hover:text-cyan-400 transition">About</a>
+          <a href="#skills" className="hover:text-cyan-400 transition">Skills</a>
+          <a href="#projects" className="hover:text-cyan-400 transition">Projects</a>
+          <a href="#contact" className="hover:text-cyan-400 transition">Contact</a>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="flex flex-col md:flex-row items-center justify-center gap-10 px-8 py-20 max-w-7xl mx-auto">
+        <div className="flex-1 text-center md:text-left">
+          <p className="uppercase tracking-[0.4em] text-cyan-400 mb-4 text-sm">
+            Student • Content Creator • Video Editor
+          </p>
+
+          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+            Trizah <span className="text-cyan-400">Archiercannes</span>
+          </h1>
+
+          <p className="text-gray-300 text-lg leading-relaxed max-w-2xl">
+            Everyday explorer, researcher of new tech hacks, future YouTuber, and passionate student of technology and content creation. I love building creative digital experiences, exploring futuristic ideas, and expressing stories through media and innovation.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
+            <button className="bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-3 rounded-2xl font-semibold transition shadow-lg shadow-cyan-500/30">
+              Explore My Work
+            </button>
+
+            <button className="border border-cyan-400 hover:bg-cyan-400 hover:text-black px-6 py-3 rounded-2xl transition">
+              Future YouTuber
+            </button>
+          </div>
+        </div>
+
+        <div className="flex-1 flex justify-center">
+          <div className="relative group">
+            <div className="absolute inset-0 bg-cyan-500 blur-3xl opacity-30 group-hover:opacity-50 transition rounded-full"></div>
+
+            <img
+              src="/images/trizah-official.png"
+              alt="Trizah"
+              className="relative rounded-3xl border border-cyan-400/40 shadow-2xl shadow-cyan-500/20 object-cover w-[320px] md:w-[420px]"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="max-w-6xl mx-auto px-8 py-20">
+        <h2 className="text-4xl font-bold mb-10 text-cyan-400">About Me</h2>
+
+        <div className="grid md:grid-cols-2 gap-10">
+          <div className="bg-white/5 border border-cyan-500/20 rounded-3xl p-8 backdrop-blur-md shadow-xl">
+            <p className="text-gray-300 leading-relaxed text-lg">
+              I am deeply passionate about technology, content creation, and futuristic digital creativity. My interests range from video editing and storytelling to coding and social media management. I enjoy discovering new tech ideas every day and turning creativity into impactful digital experiences.
+            </p>
+          </div>
+
+          <div className="bg-white/5 border border-purple-500/20 rounded-3xl p-8 backdrop-blur-md shadow-xl">
+            <p className="text-gray-300 leading-relaxed text-lg">
+              My dream is to become a successful YouTuber and digital creator while inspiring others through creative storytelling, technology, and innovation. I believe the future belongs to creators who dare to explore beyond limits.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section id="skills" className="max-w-6xl mx-auto px-8 py-20">
+        <h2 className="text-4xl font-bold mb-12 text-cyan-400">Skills</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            "Video Editing",
+            "Social Media Management",
+            "Writing Novels",
+            "Coding"
+          ].map((skill) => (
+            <div
+              key={skill}
+              className="bg-white/5 border border-cyan-500/20 hover:border-cyan-400 transition rounded-3xl p-8 text-center backdrop-blur-md hover:scale-105 duration-300"
+            >
+              <h3 className="text-xl font-semibold text-white">{skill}</h3>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section id="projects" className="max-w-6xl mx-auto px-8 py-20">
+        <h2 className="text-4xl font-bold mb-12 text-cyan-400">Projects & Work</h2>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white/5 border border-cyan-500/20 rounded-3xl p-8 backdrop-blur-md hover:scale-[1.02] transition duration-300">
+            <h3 className="text-2xl font-bold mb-4">Content Creation Journey</h3>
+            <p className="text-gray-300 leading-relaxed">
+              Sharing creative ideas, exploring modern digital trends, and building a personal brand through storytelling and visual media.
+            </p>
+          </div>
+
+          <div className="bg-white/5 border border-purple-500/20 rounded-3xl p-8 backdrop-blur-md hover:scale-[1.02] transition duration-300">
+            <h3 className="text-2xl font-bold mb-4">@offtripple</h3>
+            <p className="text-gray-300 leading-relaxed">
+              Personal creative platform focused on technology, digital creativity, future media ideas, and online storytelling.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Socials */}
+      <section className="max-w-6xl mx-auto px-8 py-20">
+        <h2 className="text-4xl font-bold mb-12 text-cyan-400">Social Media</h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            "Instagram Username Here",
+            "TikTok Username Here",
+            "YouTube Channel Here"
+          ].map((social) => (
+            <div
+              key={social}
+              className="bg-white/5 border border-cyan-500/20 rounded-3xl p-6 text-center hover:border-cyan-400 transition"
+            >
+              <p className="text-gray-300">{social}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="max-w-4xl mx-auto px-8 py-20">
+        <div className="bg-white/5 border border-cyan-500/20 rounded-3xl p-10 backdrop-blur-md text-center">
+          <h2 className="text-4xl font-bold mb-6 text-cyan-400">Contact Me</h2>
+
+          <p className="text-gray-300 mb-8 text-lg">
+            Interested in collaborations, content creation, or creative digital projects? Let’s connect through WhatsApp or social media.
+          </p>
+
+          <div className="flex flex-col items-center gap-4">
+            <a
+              href="https://wa.me/254110594698"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-cyan-500 hover:bg-cyan-400 text-black px-8 py-4 rounded-2xl font-bold transition shadow-lg shadow-cyan-500/30"
+            >
+              Chat on WhatsApp
+            </a>
+
+            <p className="text-cyan-300 text-lg font-medium">
+              WhatsApp: 0110594698
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-cyan-500/20 py-8 text-center text-gray-400 text-sm">
+        © 2026 Trizah Archiercannes • Cyber Futuristic Portfolio
+      </footer>
+    </div>
+  );
+}
